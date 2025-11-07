@@ -54,7 +54,7 @@ npm install -g @opencode/cli
 # Edit ~/.config/opencode/opencode.json → add llama.cpp endpoint (refer to  `config` folder in this repo)
 ```
 
-### 6 (Optional). Cloudflare Tunnel
+### 6 (Optional) Create Cloudflare Tunnel
 
 Follow [the cloudflare tunnel doc](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/get-started/tunnel-useful-terms/#remotely-managed-tunnel) to create remotely-managed tunnel or locally-managed tunnel.
 
