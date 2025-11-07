@@ -1,0 +1,7 @@
+models/
+assets/large/
+*.gguf
+*.ckpt
+__pycache__/
+node_modules/
+.env

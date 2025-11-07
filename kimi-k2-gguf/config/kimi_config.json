@@ -1,0 +1,23 @@
+{
+  "default_model": "local-kimi-k2",
+  "models": {
+    "local-kimi-k2": {
+      "provider": "openai-local",
+      "model": "kimi-k2",
+      "max_context_size": 131072,
+      "capabilities": null
+    }
+  },
+  "providers": {
+    "openai-local": {
+      "type": "openai_legacy",
+      "base_url": "http://localhost:8000",
+      "api_key": "dummy"
+    }
+  },
+  "loop_control": {
+    "max_steps_per_run": 100,
+    "max_retries_per_step": 3
+  },
+  "services": {}
+}

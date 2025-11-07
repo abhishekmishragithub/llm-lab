@@ -1,0 +1,31 @@
+// please refer to https://opencode.ai/docs/config/
+{
+  "$schema": "https://opencode.ai/config.json",
+  // 1. set the default model for quick use
+  "model": "local-llama-cpp/kimi-k2-instruct",
+
+  "provider": {
+    // 2. define a custom provider ID (e.g., 'local-llama-cpp')
+    "local-llama-cpp": {
+      "name": "Local llama.cpp Server (Kimi K2)",
+      "npm": "@ai-sdk/openai-compatible", // the correct AI SDK adapter
+      "options": {
+        // 3. set the base URL, including the '/v1' path for the OpenAI API/compatible endpoint
+        "baseURL": "http://0.0.0.0:8000/v1"
+        // Note: '0.0.0.0' is the host, but local client connection still uses 'http://localhost:8000/v1'
+        // or the specific IP if connecting remotely.
+        // "baseURL": "https://models.abhishekmishra.dev/v1"
+        // "baseURL": "http://localhost:8000/v1"
+      },
+      "models": {
+        // 4. define the model ID OpenCode will use: `provider_id/model_id`
+        "kimi-k2-instruct": {
+          "name": "Kimi-K2 Instruct (32k Context)",
+          // this 'id' must match the model name the llama.cpp server expects in the API request.
+          "id": "kimi-k2-instruct",
+          "context_size": 32768 // matches the llama.cpp server's --ctx-size
+        }
+      }
+    }
+  }
+}
