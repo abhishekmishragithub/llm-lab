@@ -95,7 +95,7 @@ See [`notes.md`](./notes.md) for gotchas, performance tips, GPU RAM used etc.
 
 ## E2E Cloud TIR Node Setup
 
-- I used [E2E Networks TIR](https://tir.e2enetworks.com/) (started) with a 2xH200, setup to host this model. It comfortably runs Kimi-K2 2-bit quantized model. You can infact run the higher bit quantized models as well with the same setup.
+- I used [E2E Networks TIR](https://tir.e2enetworks.com/) for GPU (started) with a 2xH200, setup to host this model. It comfortably runs Kimi-K2 2-bit quantized model. You can infact run the higher bit quantized models as well with the same setup.
 
 - You can follow the [E2E Cloud TIR Node Setup guide](https://docs.e2enetworks.com/docs/tir/Nodes/GuideTIR/) to set up your own node.
 
@@ -104,6 +104,6 @@ See [`notes.md`](./notes.md) for gotchas, performance tips, GPU RAM used etc.
 
 ## Related
 
-* [noonshot's official deployment guide](https://github.com/MoonshotAI/Kimi-K2/blob/main/docs/deploy_guidance.md)
+* [moonshot's official deployment guide](https://github.com/MoonshotAI/Kimi-K2/blob/main/docs/deploy_guidance.md)
 * [unsloth gguf quant releases](https://huggingface.co/unsloth/Kimi-K2-Instruct-GGUF)
 * [reddit thread on 1.8-bit performance](https://www.reddit.com/r/LocalLLaMA/comments/1m0lyjn/kimi_has_impressive_coding_performance_even_deep/)
