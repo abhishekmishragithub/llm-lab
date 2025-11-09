@@ -33,13 +33,22 @@ huggingface-cli download unsloth/Kimi-K2-Instruct-GGUF \
   --local-dir models/kimi-k2-gguf/
 ```
 
-### 3. Run Model Server
+### 3. Merge the GGUF shard files
+
+The model that we downloaded is split into multiple shards. We need to merge them into a single file before running the server. You need only the first part of the split model file.
+The `llama-gguf-split` utility automatically recognizes all parts of the shard as long as they are in the same directory and follow the correct naming convention.
+
+```bash
+./llama.cpp/llama-gguf-split --merge models/kimi-k2-gguf/UD-Q2_K_XL/Kimi-K2-Instruct-UD-Q2_K_XL-00001-of-00008.gguf models/kimi-k2-gguf/UD-Q2_K_XL/Kimi-K2-Instruct-UD-Q2_K_XL.gguf
+```
+
+### 4 Run Model Server
 
 ```bash
 ./scripts/run_llama_cpp_server.sh
 ```
 
-### 4. Kimi CLI Integration
+### 5. Kimi CLI Integration
 
 ```bash
 uv tool install kimi-cli
@@ -47,14 +56,14 @@ uv tool install kimi-cli
 # add the tunnel domain url as a base url if you are running cloudflare tunnel
 ```
 
-### 5. OpenCode CLI Integration
+### 6. OpenCode CLI Integration
 
 ```bash
 npm install -g @opencode/cli
 # Edit ~/.config/opencode/opencode.json → add llama.cpp endpoint (refer to  `config` folder in this repo)
 ```
 
-### 6 (Optional) Create Cloudflare Tunnel
+### 7 (Optional). Cloudflare Tunnel
 
 Follow [the cloudflare tunnel doc](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/get-started/tunnel-useful-terms/#remotely-managed-tunnel) to create remotely-managed tunnel or locally-managed tunnel.
 
