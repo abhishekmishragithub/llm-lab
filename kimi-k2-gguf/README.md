@@ -104,7 +104,7 @@ See [`notes.md`](./notes.md) for gotchas, performance tips, GPU RAM used etc.
 
 ## E2E Cloud TIR Node Setup
 
-- I used [E2E Networks TIR](https://tir.e2enetworks.com/) for GPU (started) with a 2xH200, setup to host this model. It comfortably runs Kimi-K2 2-bit quantized model. You can infact run the higher bit quantized models as well with the same setup.
+- I used [E2E Networks TIR](https://tir.e2enetworks.com/) for GPU (started) with a 4xH200, setup to host this model. It comfortably runs Kimi-K2 2-bit quantized model. You can infact run the higher bit quantized models as well with the same setup.
 
 - You can follow the [E2E Cloud TIR Node Setup guide](https://docs.e2enetworks.com/docs/tir/Nodes/GuideTIR/) to set up your own node.
 
