@@ -2,9 +2,9 @@ A collection of my experiments running large language models locally — with ll
 
 ## Models/Experiments
 
-| Model / Setup       | Description                                                                 | Link |
-|---------------------|-----------------------------------------------------------------------------|------|
-| **Kimi-K2 (GGUF)**  | Run quantized Kimi-K2 with llama.cpp + Kimi CLI + OpenCode CLI              | [🔗](./kimi-k2-gguf/README.md) |
+| Model / Setup       | Description                                                                 | Link | Blog |
+|---------------------|-----------------------------------------------------------------------------|------|------|
+| **Kimi-K2 (GGUF)**  | Run quantized Kimi-K2 with llama.cpp + Kimi CLI + OpenCode CLI              | [🔗](./kimi-k2-gguf/README.md) | NA |
 
 ## Stack Used
 
